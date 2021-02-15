@@ -1,0 +1,10 @@
+apiVersion: test-hjy.demo01/v1
+kind: Demo01
+metadata:
+  name: demo01-sample
+  namespace: hjy-dev
+spec:
+  # Add fields here
+  #foo: bar
+  firstname: yanjiemao
+  lastname: hjy-02

@@ -1,0 +1,20 @@
+# permissions for end users to view demo01s.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: demo01-viewer-role
+rules:
+- apiGroups:
+  - test-hjy.demo01
+  resources:
+  - demo01s
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test-hjy.demo01
+  resources:
+  - demo01s/status
+  verbs:
+  - get

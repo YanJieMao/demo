@@ -1,0 +1,11 @@
+domain: demo01
+layout: go.kubebuilder.io/v3
+projectName: demo01
+repo: base/kubernetes-sigs/kubebuilder-demo/demo01
+resources:
+- api:
+    crdVersion: v1
+  group: test-hjy
+  kind: Demo01
+  version: v1
+version: 3-alpha
