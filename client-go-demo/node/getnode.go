@@ -8,7 +8,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-func main() {
+func GetNode() {
 
 	//初始化客户端
 	clientset := common.InitClientset(common.InitConfig())
@@ -41,4 +41,9 @@ func main() {
 	// fmt.Printf("Status: %s \n", nodeRel.Status.Conditions[len(nodes.Items[0].Status.Conditions)-1].Type)
 	fmt.Printf("Status: %s \n", nodeRel.Status.Conditions[len(nodeRel.Status.Conditions)-1].Type)
 	fmt.Printf("Mem: %s \n", nodeRel.Status.Allocatable.Memory().String())
+}
+
+func main() {
+
+	GetNode()
 }
